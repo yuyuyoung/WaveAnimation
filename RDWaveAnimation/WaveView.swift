@@ -147,6 +147,8 @@ class WaveView: UIView {
     }
     
     deinit {
+        waveDisplaylink!.invalidate()
+        waveDisplaylink = nil
         cycleMaskLayer.removeFromSuperlayer()
         waveLayer.removeFromSuperlayer()
     }
